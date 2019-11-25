@@ -5,6 +5,7 @@ import Home from './Home';
 import CreateAccount from './CreateAccount';
 import GradeLevel from './GradeLevel';
 import Quizzes from './Quizzes';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 // const databaseUrl = process.env.HEROKU_DB_URL || 'http://localhost:3000'
 const databaseUrl = 'https://project3-backend-test.herokuapp.com'
@@ -22,7 +23,7 @@ class App extends React.Component {
    render(){
     return (
     <Router>
-       <nav class ="nav">
+       <nav className ="nav">
     <Link to="/"> Homepage</Link>
     <Link to="/createaccount"> Create Account </Link>
     <Link to="/Quizzes"> Select Quizzes</Link>
