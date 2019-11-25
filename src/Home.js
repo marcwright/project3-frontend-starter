@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom'
-//const getquizzes = `${databaseUrl}/api/users,`
+const getquizzes = 'http://localhost:3000/api/instructors'
 
 class Home extends React.Component {
     constructor(){
