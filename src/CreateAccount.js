@@ -3,28 +3,30 @@ import './App.css';
 import axios from 'axios';
 const serverUrl = 'http://localhost:3000/api';
 
-
-
-
-
-
 class CreateAccount extends React.Component {
     state = {};
-
+    submit(){
+    
+    }
     render() {
         return (
-            <React.Fragment>
-            <h1>Create Account</h1>
-                <form onSubmit={this.createInstructor} onChange={e => this.handleChange(e)}>
-                Name: <input type='text' name='name' />
-                Subject: <input type='text' name='subject' />
-                Grade Level: <input type='text' name='grade level' />
-                
-                <input type='submit' value='Create Account' />
+            <div>
+                <h1>Teacher's Pet</h1>
+                <h2>Create Account</h2>
+                <form>
+                    <label>
+                    Name:
+                    <input type="text" name="name"/>
+                    Instructor Id:
+                    <input type="text" id="id"/>
+                    Subject:
+                    <input type="text" subject="subject"/>
+                    Grade Level:
+                    <input type="text" GradeLevel="GradeLevel"/>
+                    </label>
+                    <button onClick = {this.submit()} >Submit</button>
                 </form>
-            </React.Fragment>
-                
-            
+            </div>
         )
     }
 

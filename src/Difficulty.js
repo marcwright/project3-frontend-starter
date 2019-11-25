@@ -1,21 +1,15 @@
 import React from 'react';
 import './App.css';
 import axios from 'axios';
-import { Redirect } from 'react-router-dom';
-import Easy from './Easy';
+import { Redirect } from 'react-router-dom'
 import Medium from './Medium';
-import Hard from './Hard';
-
-class Quizzes extends React.Component {
+class Difficulty extends React.Component {
     constructor(){
         super()
         this.state = {
             redirecteasy: false,
             redirectmedium: false,
-            redirecteasy: false,
-            Easy,
-            Medium,
-            Hard,
+            redirecteasy: false
         }
         this.easy = this.easy.bind(this);
         this.medium = this.medium.bind(this);
@@ -29,8 +23,8 @@ class Quizzes extends React.Component {
         axios({
             Method: 'get',
             Url: 'https://opentdb.com/api.php?amount=10&category=18&difficulty=easy&type=multiple',
-            category: "Science: Computers",
-           difficulty: "easy",
+            category: " ",
+           difficulty: " ",
            question: " ",
            correct_answer: " ",
            incorrect_answer: " "
@@ -93,7 +87,6 @@ class Quizzes extends React.Component {
                     <input type="text" id="id" />
                     </label>
                 </form>
-                <h2>Difficulty</h2>
                 <button onClick={this.easy} >easy</button>
                 <button onClick={this.medium} >medium</button>
                 <button onClick={this.hard} >hard</button>
@@ -102,7 +95,7 @@ class Quizzes extends React.Component {
         )
     }
 }
-export default Quizzes;
+export default Difficulty;
 
 
 
